@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>swagger-jaxrs2-servlet-initializer</artifactId>
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
     <name>swagger-jaxrs2-servlet-initializer</name>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>

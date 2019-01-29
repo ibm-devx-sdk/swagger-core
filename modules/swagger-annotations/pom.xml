@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>swagger-annotations</artifactId>
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
     <name>swagger-annotations</name>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>

@@ -10,7 +10,7 @@
 		<relativePath>../..</relativePath>
 	</parent>
 	<artifactId>swagger-integration</artifactId>
-	<packaging>bundle</packaging>
+	<packaging>jar</packaging>
 	<name>swagger-integration</name>
 	<dependencies>
 		<dependency>
