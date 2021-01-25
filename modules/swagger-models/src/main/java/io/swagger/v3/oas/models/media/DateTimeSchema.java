@@ -16,6 +16,9 @@
 
 package io.swagger.v3.oas.models.media;
 
+import java.time.Instant;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -51,6 +54,9 @@ public class DateTimeSchema extends Schema<Date> {
             try {
                 if (value instanceof Date) {
                     return (Date) value;
+                } else if (value instanceof String) {
+                    TemporalAccessor ta = DateTimeFormatter.ISO_INSTANT.parse((String) value);
+                    return Date.from(Instant.from(ta));
                 }
             } catch (Exception e) {
             }
