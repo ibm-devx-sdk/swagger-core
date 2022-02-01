@@ -16,6 +16,11 @@
 
 package io.swagger.v3.oas.models.media;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.Date;
 import java.util.Objects;
 
@@ -50,6 +55,10 @@ public class DateSchema extends Schema<Date> {
             try {
                 if (value instanceof Date) {
                     return (Date) value;
+                } else if (value instanceof String) {
+                    LocalDate ld = LocalDate.parse((String) value);
+                    Instant instant = Instant.from(ld.atStartOfDay(ZoneId.of("UTC")));
+                    return Date.from(instant);
                 }
             } catch (Exception e) {
             }
